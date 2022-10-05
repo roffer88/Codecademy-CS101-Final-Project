@@ -10,23 +10,27 @@ def daily_skincare_routine():
         print(routine)
         print("Have a great day!")
     else:
+        routine = ""
         yesterday = (input("What routine did you do yesterday? ")).lower()
         if yesterday == 'exfoliate':
             routine = '''1. Cleanse
 2. Retinol - Matrixyl Serum
 3. Moisturise'''
+            print(routine)
         elif yesterday == 'retinol':
             routine = '''1. Cleanse
 2. Hyaluronic Acid
 3. Moisturise
 4. Oil'''
+            print(routine)
         elif yesterday == 'recovery':
             routine = '''1. Cleanse - Avene
 2. Chemical Exfoliate
 3. Moisturise'''
+            print(routine)
         else:
             print("Entry not valid.")
-        print(routine)
+        
         print("Good night & sweet dreams!")
         
 
