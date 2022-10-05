@@ -1,18 +1,33 @@
-print("Welcome to the skin care routine program!")
-day = (input("What day is it today? ")).lower()
-#print(day)
-def daily_routine(day):
-    if day == 'monday' or day == 'wednesday' or day == 'friday':
-        return '''Exfoliate
-Moisturize'''
-    elif day == 'tuesday' or day == 'thursday':
-        return '''Exfoliate
-Moisturize
-Eye Drops'''
-    elif day == 'satuday' or day == 'sunday':
-        return '''Eat Pizza
-Watch Movies
-Sleep whenever'''
+def daily_skincare_routine():
+    print("Welcome to your daily skincare routine!")
+    time = (input("Is it morning or evening? Please enter 'morning' or 'evening'. ")).lower()
+    if time == 'morning':
+        routine = '''1. Cleanse
+2. Vitamin C on dry skin
+3. Hyaluronic Acid on damp skin
+4. Moisturise
+5. Sunscreen'''
+        print(routine)
+        print("Have a great day!")
     else:
-        return "Not a valid day. Try again."
-print(daily_routine(day))
+        yesterday = (input("What routine did you do yesterday? ")).lower()
+        if yesterday == 'exfoliate':
+            routine = '''1. Cleanse
+2. Retinol - Matrixyl Serum
+3. Moisturise'''
+        elif yesterday == 'retinol':
+            routine = '''1. Cleanse
+2. Hyaluronic Acid
+3. Moisturise
+4. Oil'''
+        elif yesterday == 'recovery':
+            routine = '''1. Cleanse - Avene
+2. Chemical Exfoliate
+3. Moisturise'''
+        else:
+            print("Entry not valid.")
+        print(routine)
+        print("Good night & sweet dreams!")
+        
+
+daily_skincare_routine()
